@@ -24,4 +24,3 @@ This repo contains the **demo.st** agent for [Claude Code](https://code.claude.c
 
 - **demo.st:** https://demo.st  
 - **Terms & Privacy:** https://demo.st/terms, https://demo.st/privacy  
-- **Cursor plugin (main repo):** https://github.com/demo-stage/demo.st  
