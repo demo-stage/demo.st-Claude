@@ -1,0 +1,7 @@
+{
+  "name": "demo-st",
+  "description": "Deploy static sites and demos to demo.st: reserve a subdomain, upload a zip, get a live link like yourproject.demo.st. Uses the demo.st MCP server.",
+  "version": "1.0.0",
+  "repository": "https://github.com/demo-stage/demo.st-Claude",
+  "homepage": "https://demo.st"
+}

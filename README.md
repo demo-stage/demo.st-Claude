@@ -1,24 +1,31 @@
-# demo.st — Claude Code agent
+# demo.st — Claude Code plugin
 
-This repo contains the **demo.st** agent for [Claude Code](https://code.claude.com/) and [Claude Code Market](https://www.ccmarket.dev/). The agent guides Claude to deploy static sites and demos to [demo.st](https://demo.st) using the demo.st MCP server.
+A [Claude Code](https://code.claude.com/) plugin that adds a **deploy** subagent and the **demo.st** MCP server. Use it to deploy static sites and demos to [demo.st](https://demo.st): reserve a subdomain, upload a zip, get a live link like `yourproject.demo.st`.
 
-## Install (Claude Code)
+## Install
 
-1. **Add the agent file to Claude Code:**
-   ```bash
-   mkdir -p ~/.claude/agents
-   curl -o ~/.claude/agents/demo-st.md https://raw.githubusercontent.com/demo-stage/demo.st-Claude/main/demo-st.md
-   ```
+**From the official marketplace (once listed):**  
+In Claude Code, run `/plugin` → Discover → search for **demo-st** → Install.
 
-2. **Configure the demo.st MCP server** in Claude Code (project `.mcp.json` or user settings):
-   - **URL:** `https://demo.st/mcp`
-   - **Headers:** `Authorization: Bearer ${env:DEMO_ST_MCP_TOKEN}`
+**From this repo (before or without marketplace):**
 
-3. **Get your token:** Sign in at [https://demo.st](https://demo.st) → [MCP / token page](https://demo.st/api/mcp/token) → copy token, then:
+```bash
+/plugin install https://github.com/demo-stage/demo.st-Claude
+```
+
+## Setup
+
+1. **Get your token:** Sign in at [https://demo.st](https://demo.st) → [MCP / token](https://demo.st/api/mcp/token) → copy token.
+2. **Set the token:**
    - macOS/Linux: `export DEMO_ST_MCP_TOKEN="your-token"`
    - PowerShell: `$env:DEMO_ST_MCP_TOKEN = "your-token"`
+3. The plugin adds the demo.st MCP server automatically; with `DEMO_ST_MCP_TOKEN` set, the tools are available.
 
-4. Use in Claude Code: *"Use the demo-st agent to deploy this project to a live link"* or *"Publish the build to demo.st with subdomain my-app"*.
+## Use
+
+- *"Use the demo-st deploy agent to deploy this project to a live link"*
+- *"Publish the build to demo.st with subdomain my-app"*
+- Or run `/agents` and choose the **deploy** agent.
 
 ## Links
 

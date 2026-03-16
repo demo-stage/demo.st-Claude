@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "demo-st": {
+      "type": "http",
+      "url": "https://demo.st/mcp",
+      "headers": {
+        "Authorization": "Bearer ${DEMO_ST_MCP_TOKEN}"
+      }
+    }
+  }
+}
